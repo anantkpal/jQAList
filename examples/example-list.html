@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>JQuery : List Example</title>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script src="../src/jQAList.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			$('#container').jQAList(
+				{ 
+					valueselectors:['.name','.rs','.profession'],
+					sortOptions :[
+							{event:'click',selector:'#sortByName',sortSelector:'.name'},
+							{event:'click',selector:'#sortByProfession',sortSelector:'.profession'},
+							{event:'click',selector:'#sortByRS',sortSelector:'.rs'}
+						      ]
+				}
+				);
+
+			});
+		</script>
+		<style>
+		.alist-item {
+		 	border-top:1px solid black;
+		}
+		.alist-item:last-child {
+		 	border-bottom:1px solid black;
+		}
+		label {
+		   
+		    font-style:italic;
+		    width:200px;
+		    display: inline-block
+		}
+		.alist-item > span{
+		    display: block;
+		}
+		.alist-item > span > span{
+		    display: inline-block;
+		}
+		.searchbox{
+			display:block;
+			padding-bottom:10px;		
+		}
+		</style>
+	</head>
+	<body>
+	  <h1 align="center">Example List</h1>
+		<span class="searchbox">
+			<label>Search String</label>
+			<input type="text" value="" id="alist-searchbox"/>
+			<br/>
+			<button id="sortByName">Sort By Name</button>
+			<button id="sortByProfession">Sort By Profession</button>
+			<button id="sortByRS">Sort By Profession</button>
+		</span>
+	  <div id="alist-container">
+		<div class="alist-item">
+			<span><label>Name :</label><span class="name">Robin</span></span>
+			<span><label>Profession :</label><span class="profession">News Reader</span></span>
+			<span><label>Relationship-Status :</label><span class="rs">Commited</span></span>
+		</div>
+		<div class="alist-item">
+			<span><label>Name :</label><span class="name">Ted</span></span>
+			<span><label>Profession :</label><span class="profession">Architect</span></span>
+			<span><label>Relationship-Status :</label><span class="rs">Don no</span></span>
+		</div>
+		<div class="alist-item">
+			<span><label>Name :</label><span class="name">Lilly</span></span>
+			<span><label>Profession :</label><span class="profession">Teacher</span></span>
+			<span><label>Relationship-Status :</label><span class="rs">Married</span></span>
+		</div>
+		
+	  </div>
+	</body>
+</html>
