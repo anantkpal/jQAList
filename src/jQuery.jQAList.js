@@ -1,6 +1,13 @@
+/*
+ * jQuery.jQAList
+ * Author: Anant Pal -  anantkpal@yahoo.co.in
+ * Copyright (c) 2013 Anant Pal(anantkpal@yahoo.co.in).  All rights reserved.
+ * The copyrights embodied in the content of this file are licensed
+ * by Anant Pal(anantkpal@yahoo.co.in) under the BSD  open source license.
+ */
+
 (function($) {
 	$.fn.jQAList = function(options) { 
-		// merge default and user parameters
 		options.paginationOptions = $.extend({
  					   		enabled:false,
  					   		pageLength:5,
