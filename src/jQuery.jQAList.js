@@ -1,4 +1,4 @@
-/*
+/*!
  * jQuery.jQAList
  * Author: Anant Pal -  anantkpal@yahoo.co.in
  * Copyright (c) 2013 Anant Pal(anantkpal@yahoo.co.in).  All rights reserved.
