@@ -63,6 +63,8 @@ HTML :
 		</div>
 ``` 
 
+JQuery Binding:
+
 ```javascript
 		$('#container').jQAList(
 				{ 
