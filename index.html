@@ -4,8 +4,6 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="A jQuery Plugin to sort,search Any Kind of Lists">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Javascript List,Jquery List Plugin,jQAList,jquery">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
@@ -44,12 +42,86 @@
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>To be documented only example included in examples directory</p>
+<h3>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example:</h3>
+
+<p>HTML :</p>
+
+<div class="highlight highlight-html"><pre>        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"searchbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Search String<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">id=</span><span class="s">"alist-searchbox"</span><span class="nt">/&gt;</span>
+
+            <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"sortByName"</span><span class="nt">&gt;</span>Sort By Name<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"sortByProfession"</span><span class="nt">&gt;</span>Sort By Profession<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"sortByRS"</span><span class="nt">&gt;</span>Sort By Relationship-Status<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"alist-pagination"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"alist-container"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alist-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Name :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Robin<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Profession :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"profession"</span><span class="nt">&gt;</span>News Reader<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Relationship-Status :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"rs"</span><span class="nt">&gt;</span>Commited<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alist-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Name :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Ted<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Profession :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"profession"</span><span class="nt">&gt;</span>Architect<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Relationship-Status :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"rs"</span><span class="nt">&gt;</span>Don no<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alist-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Name :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Lilly<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Profession :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"profession"</span><span class="nt">&gt;</span>Teacher<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Relationship-Status :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"rs"</span><span class="nt">&gt;</span>Married<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+
+            <span class="c">&lt;!-- Examples --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alist-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Name :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Name One<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Profession :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"profession"</span><span class="nt">&gt;</span>Profession Type Two<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Relationship-Status :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"rs"</span><span class="nt">&gt;</span>R Status Two<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alist-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Name :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Name Two<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Profession :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"profession"</span><span class="nt">&gt;</span>Infrastrusture Architect<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Relationship-Status :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"rs"</span><span class="nt">&gt;</span>Don no<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alist-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Name :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Name Three<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Profession :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"profession"</span><span class="nt">&gt;</span>Professor<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;&lt;label&gt;</span>Relationship-Status :<span class="nt">&lt;/label&gt;&lt;span</span> <span class="na">class=</span><span class="s">"rs"</span><span class="nt">&gt;</span>Confused<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>JQuery Binding:</p>
+
+<div class="highlight highlight-javascript"><pre>        <span class="nx">$</span><span class="p">(</span><span class="s1">'#container'</span><span class="p">).</span><span class="nx">jQAList</span><span class="p">(</span>
+                <span class="p">{</span> 
+                    <span class="nx">valueselectors</span><span class="o">:</span><span class="p">[</span><span class="s1">'.name'</span><span class="p">,</span><span class="s1">'.rs'</span><span class="p">,</span><span class="s1">'.profession'</span><span class="p">],</span>
+                    <span class="nx">sortOptions</span> <span class="o">:</span><span class="p">[</span>
+                            <span class="p">{</span><span class="nx">event</span><span class="o">:</span><span class="s1">'click'</span><span class="p">,</span><span class="nx">selector</span><span class="o">:</span><span class="s1">'#sortByName'</span><span class="p">,</span><span class="nx">sortSelector</span><span class="o">:</span><span class="s1">'.name'</span><span class="p">},</span>
+                            <span class="p">{</span><span class="nx">event</span><span class="o">:</span><span class="s1">'click'</span><span class="p">,</span><span class="nx">selector</span><span class="o">:</span><span class="s1">'#sortByProfession'</span><span class="p">,</span><span class="nx">sortSelector</span><span class="o">:</span><span class="s1">'.profession'</span><span class="p">},</span>
+                            <span class="p">{</span><span class="nx">event</span><span class="o">:</span><span class="s1">'click'</span><span class="p">,</span><span class="nx">selector</span><span class="o">:</span><span class="s1">'#sortByRS'</span><span class="p">,</span><span class="nx">sortSelector</span><span class="o">:</span><span class="s1">'.rs'</span><span class="p">}</span>
+                              <span class="p">],</span>
+                    <span class="nx">paginationOptions</span><span class="o">:</span><span class="p">{</span>
+                        <span class="nx">enabled</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+                        <span class="nx">pageLength</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+                        <span class="nx">showMaxPageNumbers</span><span class="o">:</span><span class="mi">3</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="p">);</span>
+</pre></div>
 
 <h2>
 <a name="authors" class="anchor" href="#authors"><span class="octicon octicon-link"></span></a>Authors</h2>
 
-<p><a href="https://www.github.com/anantkpal">Anant Pal</a></p>
+<p><a href="http://anantkpal.github.io">Anant Pal</a></p>
+
+<h2>
+<a name="copyright-and-license" class="anchor" href="#copyright-and-license"><span class="octicon octicon-link"></span></a>Copyright And License</h2>
+
+<p>Copyright (c) 2013,2014 Anant Pal(<a href="mailto:anantkpal@yahoo.co.in">anantkpal@yahoo.co.in</a>) All rights reserved. 
+The copyrights embodied in the content of this file are licensed by Anant Pal(<a href="mailto:anantkpal@yahoo.co.in">anantkpal@yahoo.co.in</a>) under the BSD open source license</p>
         </section>
 
         <aside id="sidebar">
